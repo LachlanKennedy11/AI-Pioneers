@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Turing: A Pioneer of AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .slide {
+            display: none;
+        }
+        .slide.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-4">
+
+    <!-- Main Container -->
+    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-4xl w-full flex flex-col md:flex-row h-auto md:h-[600px]">
+
+        <!-- Sidebar Navigation -->
+        <div class="md:w-1/4 bg-gray-900 text-white p-6 flex flex-col justify-between rounded-l-3xl">
+            <div>
+                <h1 class="text-2xl font-bold mb-4 text-emerald-400">Alan Turing</h1>
+                <p class="text-sm text-gray-400 mb-8">Pioneer of Computer Science & AI</p>
+                <nav>
+                    <button class="nav-button w-full text-left py-2 px-4 rounded-xl text-lg font-semibold transition-colors duration-300 mb-2 bg-emerald-600 hover:bg-emerald-700 focus:outline-none" onclick="showSlide(1)">Early Life</button>
+                    <button class="nav-button w-full text-left py-2 px-4 rounded-xl text-lg font-semibold transition-colors duration-300 mb-2 hover:bg-gray-800 focus:outline-none" onclick="showSlide(2)">The Turing Test</button>
+                    <button class="nav-button w-full text-left py-2 px-4 rounded-xl text-lg font-semibold transition-colors duration-300 mb-2 hover:bg-gray-800 focus:outline-none" onclick="showSlide(3)">Modern AI</button>
+                </nav>
+            </div>
+            <div class="mt-8">
+                <p class="text-xs text-gray-500">Click the buttons to navigate.</p>
+            </div>
+        </div>
+
+        <!-- Presentation Slides Container -->
+        <div class="md:w-3/4 p-8 overflow-y-auto">
+
+            <!-- Slide 1: Early Life and Major Contributions -->
+            <div id="slide-1" class="slide active">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">Early Life & Major Contributions</h2>
+                <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+                    <img src="https://placehold.co/400x400/1f2937/d1d5db?text=Alan+Turing" alt="Portrait of Alan Turing" class="w-full md:w-1/2 rounded-xl shadow-lg">
+                    <div class="flex-1">
+                        <p class="text-gray-700 mb-4 leading-relaxed">Alan Mathison Turing (1912-1954) was a brilliant English mathematician, computer scientist, logician, cryptanalyst, and philosopher. He is widely considered the father of theoretical computer science and artificial intelligence.</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                            <li>In his 1936 paper, "On Computable Numbers," he introduced the concept of the **Turing Machine**, a theoretical model of computation that laid the groundwork for modern computers. </li>
+                            <li>During World War II, he worked at Bletchley Park, the British codebreaking center. He played a crucial role in designing the **Bombe**, an electromechanical machine used to decipher German Enigma-encrypted messages. </li>
+                            <li>Turing's work at Bletchley Park is credited with shortening the war by an estimated two to four years, saving countless lives.</li>
+                        </ul>
+                        <a href="https://www.youtube.com/watch?v=delZb6b9Yb8" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-emerald-600 hover:bg-emerald-700 transition-colors duration-300">
+                            Watch a documentary about Turing
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Contributions to AI -->
+            <div id="slide-2" class="slide">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">Foundational Ideas in AI</h2>
+                <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+                    <div class="flex-1">
+                        <p class="text-gray-700 mb-4 leading-relaxed">In his 1950 paper, "Computing Machinery and Intelligence," Turing posed the question: "Can machines think?" To answer this, he proposed what is now known as the **Turing Test**.</p>
+                        <p class="text-gray-700 mb-4 leading-relaxed">The test involves an interrogator communicating with a human and a machine via text. If the interrogator cannot reliably tell the difference, the machine is said to have passed the test. It's not a test of consciousness, but of a machine's ability to exhibit intelligent behavior indistinguishable from a human's.</p>
+                        <p class="text-gray-700 mb-6 leading-relaxed">Turing also introduced the concept of the "Child Machine," suggesting that instead of programming a machine to be intelligent, we should program it to learn, similar to how a child learns from experience.</p>
+                        <a href="https://www.youtube.com/watch?v=sXx-PpEBR7k" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-emerald-600 hover:bg-emerald-700 transition-colors duration-300">
+                            Watch a video about the Turing Test
+                        </a>
+                    </div>
+                    <img src="https://placehold.co/400x400/1f2937/d1d5db?text=Turing+Test+Diagram" alt="Diagram of the Turing Test" class="w-full md:w-1/2 rounded-xl shadow-lg">
+                </div>
+            </div>
+
+            <!-- Slide 3: Influence on Modern AI -->
+            <div id="slide-3" class="slide">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">Turing's Legacy in Modern AI</h2>
+                <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+                    <img src="https://placehold.co/400x400/1f2937/d1d5db?text=Modern+AI+Illustration" alt="Illustration of modern AI concepts" class="w-full md:w-1/2 rounded-xl shadow-lg">
+                    <div class="flex-1">
+                        <p class="text-gray-700 mb-4 leading-relaxed">Turing's visionary ideas form the bedrock of modern AI. His Universal Turing Machine proved that a single machine could, in theory, compute anything that is computable. This concept is fundamental to the very existence of general-purpose computers and the software that runs on them, including all AI applications.</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                            <li>The concept of the Turing Test remains a powerful philosophical touchstone for evaluating machine intelligence, even if modern AI research has moved beyond it as a primary goal.</li>
+                            <li>Turing's idea of a "Child Machine" anticipated modern machine learning, where systems learn from data and experience rather than being explicitly programmed for every task.</li>
+                            <li>His work on cryptography and computation is a direct precursor to the algorithms that power everything from search engines and recommendation systems to self-driving cars and large language models.</li>
+                        </ul>
+                        <a href="https://www.youtube.com/watch?v=mF17AM6y-oA" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-emerald-600 hover:bg-emerald-700 transition-colors duration-300">
+                            See how his work impacts AI today
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="mt-8 flex justify-between">
+                <button id="prev-btn" class="px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gray-500 hover:bg-gray-600 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed" onclick="prevSlide()" disabled>Previous</button>
+                <button id="next-btn" class="px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gray-900 hover:bg-gray-800 transition-colors duration-300" onclick="nextSlide()">Next</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 3;
+
+        function showSlide(slideIndex) {
+            const slides = document.querySelectorAll('.slide');
+            const navButtons = document.querySelectorAll('.nav-button');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            navButtons.forEach(btn => btn.classList.remove('bg-emerald-600', 'hover:bg-emerald-700'));
+            navButtons.forEach(btn => btn.classList.add('hover:bg-gray-800'));
+
+            document.getElementById(`slide-${slideIndex}`).classList.add('active');
+            navButtons[slideIndex - 1].classList.add('bg-emerald-600');
+            navButtons[slideIndex - 1].classList.remove('hover:bg-gray-800');
+            
+            currentSlide = slideIndex;
+
+            // Update button states
+            prevBtn.disabled = currentSlide === 1;
+            nextBtn.disabled = currentSlide === totalSlides;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                showSlide(currentSlide + 1);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                showSlide(currentSlide - 1);
+            }
+        }
+
+        // Initialize the presentation on page load
+        window.onload = () => {
+            showSlide(1);
+        };
+    </script>
+</body>
+</html>
