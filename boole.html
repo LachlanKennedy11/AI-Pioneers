@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Boole: AI Pioneer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        .presentation-container {
+            width: 100%;
+            max-width: 900px;
+            background-color: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 600px;
+            position: relative;
+        }
+        .slide {
+            display: none;
+            flex-grow: 1;
+            padding: 2.5rem;
+            text-align: center;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .slide-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+        }
+        .slide-text {
+            font-size: 1.25rem;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+        .slide-image {
+            max-width: 80%;
+            height: auto;
+            border-radius: 1rem;
+            margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2.5rem;
+            border-top: 1px solid #e5e7eb;
+            background-color: #f9fafb;
+        }
+        .nav-button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .nav-button-prev {
+            background-color: #e5e7eb;
+            color: #4b5563;
+        }
+        .nav-button-next {
+            background-color: #2563eb;
+            color: white;
+        }
+        .nav-button:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+        }
+        .resource-link {
+            color: #2563eb;
+            text-decoration: underline;
+            font-weight: 600;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+        .resource-container {
+            margin-top: 2rem;
+        }
+        .resource-container p {
+            font-size: 1.125rem;
+            color: #1f2937;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="presentation-container">
+    <div id="slide1" class="slide active">
+        <h1 class="slide-title">George Boole: The Pioneer of Mathematical Logic</h1>
+        <p class="slide-text">George Boole (1815-1864) was a self-taught English mathematician and logician. His work laid the fundamental groundwork for modern computing and the field of artificial intelligence.</p>
+        <div class="resource-container">
+            <p>Additional Resources:</p>
+            <a href="https://www.ucc.ie/en/boole-200/aboutgeorgeboole/" target="_blank" class="resource-link">Biography of George Boole</a>
+        </div>
+    </div>
+
+    <div id="slide2" class="slide">
+        <h2 class="slide-title">Major Contributions: Boolean Algebra</h2>
+        <p class="slide-text">Boole's most significant contribution was the creation of **Boolean algebra**. He published this revolutionary idea in his 1854 work, **"An Investigation of the Laws of Thought."** He was the first to successfully apply algebraic methods to logic, effectively turning logic into a branch of mathematics.</p>
+        <img src="https://placehold.co/400x250/2563eb/ffffff?text=An+Investigation+of+the+Laws+of+Thought" alt="Cover of An Investigation of the Laws of Thought" class="slide-image">
+    </div>
+
+    <div id="slide3" class="slide">
+        <h2 class="slide-title">Contributions to Artificial Intelligence</h2>
+        <p class="slide-text">Boole's work is foundational to AI because it provided a way to express human reasoning symbolically. His goal was to find the fundamental laws of thought and express them in a symbolic language. This ambition to formalize reasoning is a core objective of AI.</p>
+        <div class="resource-container">
+            <p>Additional Resources:</p>
+            <a href="https://www.youtube.com/watch?v=k2ZfQ3WpT_U" target="_blank" class="resource-link">Video: The Digital Revolution</a>
+        </div>
+    </div>
+
+    <div id="slide4" class="slide">
+        <h2 class="slide-title">Influence on Modern AI</h2>
+        <p class="slide-text">The direct link between Boole's work and modern AI came decades later when engineer Claude Shannon realized that Boolean algebra could be used to design electrical circuits. He showed that the logical values "true" and "false" could be represented by the "on" (1) and "off" (0) states of a circuit, respectively. This insight led to the creation of **logic gates**.</p>
+        <img src="https://placehold.co/400x250/34d399/1f2937?text=Logic+Gate+Circuit+Diagram" alt="Diagram of a logic gate circuit" class="slide-image">
+    </div>
+
+    <div id="slide5" class="slide">
+        <h2 class="slide-title">A Lasting Legacy</h2>
+        <p class="slide-text">Every modern computer and AI system relies on the principles Boole pioneered. The ability of computers to perform complex calculations and process information is a direct result of his work. His legacy is the very foundation of our digital world, from smartphones to the most advanced AI algorithms.</p>
+        <div class="resource-container">
+            <p>Additional Resources:</p>
+            <a href="https://plato.stanford.edu/entries/boole/" target="_blank" class="resource-link">Stanford Encyclopedia of Philosophy: Boole</a>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <button id="prevBtn" class="nav-button nav-button-prev" onclick="changeSlide(-1)">Previous</button>
+        <button id="nextBtn" class="nav-button nav-button-next" onclick="changeSlide(1)">Next</button>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+        document.getElementById('prevBtn').disabled = (index === 0);
+        document.getElementById('prevBtn').style.opacity = (index === 0) ? 0.5 : 1;
+        document.getElementById('nextBtn').disabled = (index === slides.length - 1);
+        document.getElementById('nextBtn').style.opacity = (index === slides.length - 1) ? 0.5 : 1;
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) {
+            currentSlide = 0;
+        } else if (currentSlide >= slides.length) {
+            currentSlide = slides.length - 1;
+        }
+        showSlide(currentSlide);
+    }
+
+    showSlide(currentSlide);
+</script>
+
+</body>
+</html>
