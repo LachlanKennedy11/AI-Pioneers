@@ -1,0 +1,250 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Samuel: AI Pioneer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #1a202c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .slide-container {
+            width: 90%;
+            max-width: 960px;
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+        .slide {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+            height: 100%;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .slide.active {
+            display: flex;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .slide-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c5282;
+            margin-bottom: 1rem;
+        }
+        .slide-content h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 1rem;
+        }
+        .slide-content p {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #4a5568;
+        }
+        .slide-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+        }
+        .slide-content li {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+            gap: 1rem;
+        }
+        .nav-button, .back-button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .nav-button {
+            background-color: #3182ce;
+            color: white;
+            flex-grow: 1;
+        }
+        .back-button {
+            background-color: #e2e8f0;
+            color: #4a5568;
+            flex-grow: 1;
+        }
+        .nav-button:hover, .back-button:hover {
+            transform: translateY(-2px);
+        }
+        .link-button {
+            background-color: #38a169;
+            color: white;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            display: inline-block;
+            transition: background-color 0.2s;
+        }
+        .link-button:hover {
+            background-color: #2f855a;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        @media (max-width: 768px) {
+            .slide-content h1 { font-size: 2rem; }
+            .slide-content h2 { font-size: 1.5rem; }
+            .slide-content p { font-size: 1rem; }
+            .navigation { flex-direction: column; }
+            .nav-button, .back-button { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="slide-container">
+
+        <!-- Slide 1: Introduction -->
+        <div class="slide active" data-slide="1">
+            <div class="slide-content">
+                <h1 class="text-center">Arthur Samuel: A Pioneer in AI</h1>
+                <p class="text-center mt-4 text-xl text-gray-700">Explore the life and work of a founding figure in machine learning.</p>
+                <img src="https://placehold.co/800x450/e9d8fd/4c51bf?text=Arthur+Samuel+portrait" alt="An image of Arthur Samuel">
+            </div>
+            <div class="navigation mt-auto">
+                <button class="nav-button" onclick="showSlide(2)">Begin Presentation</button>
+            </div>
+        </div>
+
+        <!-- Slide 2: Early Life and Career -->
+        <div class="slide" data-slide="2">
+            <div class="slide-content">
+                <h2>Early Life and Career</h2>
+                <p>Born in 1901 in Emporia, Kansas, Arthur Samuel had an impressive early career in engineering. He earned his master's degree in electrical engineering from MIT and worked at **Bell Telephone Laboratories**, where he was instrumental in developing radar technology during World War II.</p>
+                <p class="mt-4">In 1949, Samuel joined **IBM**. This move marked a pivotal shift in his career, as he began to focus on the emerging field of computer science and the potential for machines to solve complex, non-numerical problems.</p>
+                <img src="https://placehold.co/800x450/c3dafe/2b6cb0?text=Early+IBM+Computer+Illustration" alt="An illustration of an early IBM computer, the IBM 701.">
+            </div>
+            <div class="navigation mt-auto">
+                <button class="back-button" onclick="showSlide(1)">Back</button>
+                <button class="nav-button" onclick="showSlide(3)">Next: Contributions to AI</button>
+            </div>
+        </div>
+
+        <!-- Slide 3: The Checkers Program -->
+        <div class="slide" data-slide="3">
+            <div class="slide-content">
+                <h2>The Checkers Program</h2>
+                <p>Samuel's most famous contribution to AI was his **checkers-playing program**, developed in the 1950s. This was one of the first programs to demonstrate the power of machine learning by improving its own performance over time.</p>
+                <p class="mt-4">Key concepts included:</p>
+                <ul class="list-disc list-inside">
+                    <li>**Rote Learning:** The program memorized board positions and associated the best moves with them.</li>
+                    <li>**Reinforcement Learning:** It learned by playing against itself, improving its strategy based on wins and losses.</li>
+                    <li>**Heuristic Search:** A scoring function was used to evaluate moves and guide the program's decisions.</li>
+                </ul>
+                <img src="https://placehold.co/800x450/b0e0e6/2c5282?text=Checkers+Board+Diagram" alt="A diagram of a checkers board with pieces in a strategic position.">
+                <a href="https://youtu.be/0-X7d3h0BCE" target="_blank" class="link-button">Watch a video about the program's history</a>
+            </div>
+            <div class="navigation mt-auto">
+                <button class="back-button" onclick="showSlide(2)">Back</button>
+                <button class="nav-button" onclick="showSlide(4)">Next: Influence Today</button>
+            </div>
+        </div>
+
+        <!-- Slide 4: Legacy and Influence Today -->
+        <div class="slide" data-slide="4">
+            <div class="slide-content">
+                <h2>Legacy and Influence Today</h2>
+                <p>Samuel's work laid the foundation for modern machine learning, a term he popularized. His concepts are fundamental to AI today:</p>
+                <ul class="list-disc list-inside">
+                    <li>**Reinforcement Learning:** The self-play method is a direct precursor to algorithms used in robotics, autonomous systems, and advanced game-playing AIs like AlphaGo.</li>
+                    <li>**Heuristic Functions:** These "educated guesses" guide countless modern AI systems, from recommendation engines to search algorithms.</li>
+                    <li>**Game-as-a-Testbed:** The idea of using games to test and develop AI is still a common and effective research practice.</li>
+                </ul>
+                <img src="https://placehold.co/800x450/a0c4ff/3b82f6?text=Modern+AI+Illustration" alt="An illustration of modern AI concepts like neural networks and data processing.">
+                <a href="https://en.wikipedia.org/wiki/Arthur_Samuel" target="_blank" class="link-button">Learn more about Arthur Samuel</a>
+            </div>
+            <div class="navigation mt-auto">
+                <button class="back-button" onclick="showSlide(3)">Back</button>
+                <button class="nav-button" onclick="showSlide(5)">End Presentation</button>
+            </div>
+        </div>
+
+        <!-- Slide 5: End -->
+        <div class="slide" data-slide="5">
+            <div class="slide-content">
+                <h1 class="text-center">Thank you!</h1>
+                <p class="text-center mt-4 text-xl text-gray-700">I hope this presentation was helpful for your research project.</p>
+                <img src="https://placehold.co/800x450/93c5fd/1e40af?text=Presentation+Complete" alt="A simple graphic indicating the end of the presentation.">
+            </div>
+            <div class="navigation mt-auto">
+                <button class="back-button" onclick="showSlide(4)">Back</button>
+                <button class="nav-button" onclick="showSlide(1)">Start Over</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 5;
+
+        function showSlide(slideNumber) {
+            if (slideNumber < 1 || slideNumber > totalSlides) {
+                return;
+            }
+
+            // Hide all slides
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+
+            // Show the requested slide
+            const targetSlide = document.querySelector(`.slide[data-slide="${slideNumber}"]`);
+            if (targetSlide) {
+                targetSlide.classList.add('active');
+            }
+
+            currentSlide = slideNumber;
+        }
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                showSlide(currentSlide + 1);
+            } else if (e.key === 'ArrowLeft') {
+                showSlide(currentSlide - 1);
+            }
+        });
+    </script>
+
+</body>
+</html>
