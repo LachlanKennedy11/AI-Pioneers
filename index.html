@@ -1,10 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My Awesome Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pioneers of Artificial Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            padding: 2.5rem;
+            line-height: 1.75;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .header-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #1f2937;
+        }
+        .intro-paragraph {
+            font-size: 1.125rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #4b5563;
+        }
+        .pioneers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+        }
+        .pioneer-card {
+            background-color: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 1.25rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .pioneer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .pioneer-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 4px solid #e5e7eb;
+        }
+        .pioneer-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+        .pioneer-timeframe {
+            font-size: 1rem;
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+            background-color: #2563eb;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+        }
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            .header-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<h1>Hello, World!</h1>
-<p>Welcome to my first GitHub Pages website.</p>
+
+<div class="container">
+    <h1 class="header-title">The Pioneers of Artificial Intelligence</h1>
+    <p class="intro-paragraph">
+        What does it mean to be an AI pioneer? It means having the vision to imagine a future where machines can think and learn, and the courage to build the very first foundations of that future. These pioneers are the innovators, mathematicians, and engineers who, through their groundbreaking work, have created the tools, theories, and concepts that have shaped the field of artificial intelligence as we know it today.
+    </p>
+    
+    <div class="pioneers-grid">
+        <!-- Pioneer Cards (in chronological order) -->
+        <div class="pioneer-card">
+            <img class="pioneer-image" src="https://placehold.co/150x150/e5e7eb/4b5563?text=Al-Khwarizmi" alt="Al-Khwarizmi">
+            <h3 class="pioneer-name">Al-Khwarizmi</h3>
+            <p class="pioneer-timeframe">c. 780 - c. 850</p>
+            <a href="Khwarizimi.html" class="button">View Slides</a>
+        </div>
+        <div class="pioneer-card">
+            <img class="pioneer-image" src="https://placehold.co/150x150/e5e7eb/4b5563?text=George+Boole" alt="George Boole">
+            <h3 class="pioneer-name">George Boole</h3>
+            <p class="pioneer-timeframe">1815 - 1864</p>
+            <a href="Boole.html" class="button">View Slides</a>
+        </div>
+        <div class="pioneer-card">
+            <img class="pioneer-image" src="https://placehold.co/150x150/e5e7eb/4b5563?text=Arthur+Samuel" alt="Arthur Samuel">
+            <h3 class="pioneer-name">Arthur Samuel</h3>
+            <p class="pioneer-timeframe">1905 - 1990</p>
+            <a href="Samuel.html" class="button">View Slides</a>
+        </div>
+        <div class="pioneer-card">
+            <img class="pioneer-image" src="https://placehold.co/150x150/e5e7eb/4b5563?text=Alan+Turing" alt="Alan Turing">
+            <h3 class="pioneer-name">Alan Turing</h3>
+            <p class="pioneer-timeframe">1912 - 1954</p>
+            <a href="Turing.html" class="button">View Slides</a>
+        </div>
+        <div class="pioneer-card">
+            <img class="pioneer-image" src="https://placehold.co/150x150/e5e7eb/4b5563?text=Herbert+Simon" alt="Herbert Simon">
+            <h3 class="pioneer-name">Herbert Simon</h3>
+            <p class="pioneer-timeframe">1916 - 2001</p>
+            <a href="Simon.html" class="button">View Slides</a>
+        </div>
+        <div class="pioneer-card">
+            <img class="pioneer-image" src="https://placehold.co/150x150/e5e7eb/4b5563?text=Joseph+Weizenbaum" alt="Joseph Weizenbaum">
+            <h3 class="pioneer-name">Joseph Weizenbaum</h3>
+            <p class="pioneer-timeframe">1923 - 2008</p>
+            <a href="Weizenbaum.html" class="button">View Slides</a>
+        </div>
+        <div class="pioneer-card">
+            <img class="pioneer-image" src="https://placehold.co/150x150/e5e7eb/4b5563?text=John+McCarthy" alt="John McCarthy">
+            <h3 class="pioneer-name">John McCarthy</h3>
+            <p class="pioneer-timeframe">1927 - 2011</p>
+            <a href="McCarthy.html" class="button">View Slides</a>
+        </div>
+        <div class="pioneer-card">
+            <img class="pioneer-image" src="https://placehold.co/150x150/e5e7eb/4b5563?text=Marvin+Minsky" alt="Marvin Minsky">
+            <h3 class="pioneer-name">Marvin Minsky</h3>
+            <p class="pioneer-timeframe">1927 - 2016</p>
+            <a href="Minsky.html" class="button">View Slides</a>
+        </div>
+        <div class="pioneer-card">
+            <img class="pioneer-image" src="https://placehold.co/150x150/e5e7eb/4b5563?text=Allen+Newell" alt="Allen Newell">
+            <h3 class="pioneer-name">Allen Newell</h3>
+            <p class="pioneer-timeframe">1927 - 1992</p>
+            <a href="Newell.html" class="button">View Slides</a>
+        </div>
+        <div class="pioneer-card">
+            <img class="pioneer-image" src="https://placehold.co/150x150/e5e7eb/4b5563?text=Geoffrey+Hinton" alt="Geoffrey Hinton">
+            <h3 class="pioneer-name">Geoffrey Hinton</h3>
+            <p class="pioneer-timeframe">1947 - Present</p>
+            <a href="Hinton.html" class="button">View Slides</a>
+        </div>
+        <div class="pioneer-card">
+            <img class="pioneer-image" src="https://placehold.co/150x150/e5e7eb/4b5563?text=Fei-Fei+Li" alt="Fei-Fei Li">
+            <h3 class="pioneer-name">Fei-Fei Li</h3>
+            <p class="pioneer-timeframe">1976 - Present</p>
+            <a href="Li.html" class="button">View Slides</a>
+        </div>
+        <div class="pioneer-card">
+            <img class="pioneer-image" src="https://placehold.co/150x150/e5e7eb/4b5563?text=Ashish+Vaswani" alt="Ashish Vaswani">
+            <h3 class="pioneer-name">Ashish Vaswani</h3>
+            <p class="pioneer-timeframe">1982 - Present</p>
+            <a href="Vaswani.html" class="button">View Slides</a>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
